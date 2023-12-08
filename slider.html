@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <div class="slide hi_slide">
+            <div class="hi-prev"></div>
+            <div class="hi-next"></div>
+            <ul>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <!-- <li><img src="./images/frame1.png" alt=""></li> -->
+                <!-- <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li>
+                <li><img src="./images/frame1.png" alt=""></li> -->
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="js/jquery.hislide.js"></script>
+    <script>
+        $('.slide').hiSlide();
+    </script>
+</body>
+
+</html>
+
+
+<!-- css -->
+
+body{
+background-color: aquamarine;
+}
+.hi_slide{
+position: relative;
+width: 754px;
+height: 292px;
+border-radius: 50px;
+margin: 115px auto 0;
+}
+.hi_slide .hi-prev,
+.hi_slide .hi-next{
+position: absolute;
+top: 50%;
+width: 40px;
+margin-top: -20%;
+border-radius: 50px;
+line-height: 40px;
+text-align: center;
+cursor: pointer;
+background-color: white;
+color: #000000;
+transition: all 0.7s;
+font-size: 20px;
+font-weight: bold;
+}
+.hi_slide .hi-prev:hover,
+.hi_slide .hi_next:hover{
+opacity: 1;
+background-color: white;
+}
+.hi_slide .hi-prev{
+left: -60px;
+}
+.hi_slide .hi-next{
+right: -60px;
+}
+.hi_slide .hi-prev::before{
+content: '<'; } .hi_slide .hi-next::before{ content: '>' ; } .hi_slide> ul{
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+    }
+    .hi_slide > ul > li{
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 147px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: #333;
+    }
+    .hi_slide > ul > li > img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    }
